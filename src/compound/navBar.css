@@ -1,0 +1,38 @@
+.nav{
+    box-shadow: var(--box-shadow);
+}
+
+.logoColor{
+    color: rgba(254,122,3,255);
+    cursor: pointer;
+}
+ .Achievers{
+    color: rgba(26,26,254,255);
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+}
+.it{
+color: rgba(255,78,12,255);
+font-size: x-large;
+font-weight: bold;
+cursor: pointer;
+}
+.nav_icons div{
+    height:2.5rem;
+    width: 2.5rem;
+    background: #eee;
+    color: var(--black);
+    line-height: 2.5rem;
+    text-align: center;
+    margin-left: .3rem;
+    border-radius: 7px;
+    padding: 5px;
+    cursor: pointer;
+}
+.nav_icons div:hover{
+    background-color: var(--orange);
+}
+.nav_Items a:hover{
+    color: var(--orange);
+}
