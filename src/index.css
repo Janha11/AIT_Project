@@ -9,8 +9,8 @@
   --lightcolor:#666;
   --box-shadow:0 .5rem 1rem rgba(0,0,0,-1);
   --border:1rem solid rgba(0,0,0,.1);
-  --outline:1rem solid rgba(0.0,0,.1);
-  --outline-hover:1rem solid  var(var(--black))
+  --outline:.1rem solid rgba(0.0,0,.1);
+  --outline-hover:.2rem solid var(--black)
 }
 body {
   margin: 0;
@@ -21,8 +21,13 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   transition: all 3s linear;
-  background-color: #eee
+  background-color: #eee;
+  overflow-x: hidden;
   
+}
+html{
+
+
 }
 a {
   text-decoration: none;

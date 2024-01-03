@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBasketShopping, faBars, faMagnifyingGlass, faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons'; // Import individual icons
 import './navBar.css';
 
 function NavBar() {
@@ -20,7 +21,7 @@ function NavBar() {
                 <ul className="flex justify-between">
                     <li className="flex items-center">
                         <span className='logoColor'>
-                            <FontAwesomeIcon icon="fa-solid fa-basket-shopping" className="w-8 h-8" />
+                            <FontAwesomeIcon icon={faBasketShopping} className="w-8 h-8" />
                         </span>
                         <span className='Achievers'>Achievers</span><span className='it'>IT</span>
                     </li>
@@ -34,27 +35,25 @@ function NavBar() {
 
                     <li className="flex items-center nav_icons">
                         <div className=' md:hidden self-center'>
-                            <FontAwesomeIcon icon="fa-solid fa-bars" className="w-6 h-6 text-gray-600 mr-4 hover:text-white" onClick={handleToggleMenu} />
+                            <FontAwesomeIcon icon={faBars} className="w-6 h-6 text-gray-600 mr-4 hover:text-white" onClick={handleToggleMenu} />
                             {isMobileMenuOpen && (
-  <section className='mobileView bg-white p-4 flex flex-col container w-full'>
-    {NavItem.map((navitem, index) => (
-      <a href={`#${navitem.toLowerCase()}`} key={index} className="py-2 text-gray-600 hover:text-blue-950" onClick={closeMobileMenu}>
-        {navitem}
-      </a>
-    ))}
-  </section>
-)}
-
-                            
+                                <div className='mobileView bg-white p-4 flex flex-col container w-full'>
+                                    {NavItem.map((navitem, index) => (
+                                        <a href={`#${navitem.toLowerCase()}`} key={index} className="py-2 text-gray-600 hover:text-blue-950" onClick={closeMobileMenu}>
+                                            {navitem}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                         <div className='color-gray-600 self-center'>
-                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="w-6 h-6 text-gray-600 mr-4 self-center hover:text-white" />
+                            <FontAwesomeIcon icon={faMagnifyingGlass} className="w-6 h-6 text-gray-600 mr-4 self-center hover:text-white" />
                         </div>
                         <div className='color-gray-600'>
-                            <FontAwesomeIcon icon="fa-solid fa-cart-shopping" className="w-6 h-8 text-gray-600 mr-6 hover:text-white" />
+                            <FontAwesomeIcon icon={faCartShopping} className="w-6 h-8 text-gray-600 mr-6 hover:text-white" />
                         </div>
                         <div className='color-gray-600'>
-                            <FontAwesomeIcon icon="fa-solid fa-user" className="w-6 h-6 text-gray-600 hover:text-white" />
+                            <FontAwesomeIcon icon={faUser} className="w-6 h-6 text-gray-600 hover:text-white" />
                         </div>
                     </li>
                 </ul>

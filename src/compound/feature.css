@@ -1,0 +1,21 @@
+.feature_main {
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+justify-content: center;
+
+
+}
+.feature_main .main{
+    padding: 3rem 2rem;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+
+}
+.feature_main .main:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
